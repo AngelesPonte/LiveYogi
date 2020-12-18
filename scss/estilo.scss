@@ -227,7 +227,6 @@ text-decoration: none; }
     font-family: lmb;
     font-size: 1.2rem;
     margin-top: 1rem;
- 
 }
 
 .fonts__titulo--secundario {
@@ -531,10 +530,11 @@ img,
 li{list-style: none;}
 
 /*My Practice*/
-.backgroud-journal{
+.background-journal{
   width: 100vw;
   background: $gradientgreen;
 }
+
 
 @media screen and (min-width: 685px) {
   .header__portada {
