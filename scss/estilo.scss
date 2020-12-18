@@ -1,0 +1,565 @@
+$colorLg:#30f0c6;
+$colorG:#585A73;
+$colorLi:#63646d;
+$lightgrey:lightgrey;
+$gradient:linear-gradient(180deg, rgba(175, 175, 180, 0.790354) 0%, rgba(199, 195, 195, 0.641894) 100%);
+$gradientgreen:linear-gradient(354deg, rgba(226,218,222,1) 0%, rgba(148,233,205,1) 100%);
+@font-face {
+  font-family: ttl;
+  src: url(../css/Fonts/TT-Norms-Fonts/TTNorms-Light.otf); }
+
+@font-face {
+  font-family: ttm;
+  src: url(../css/Fonts/TT-Norms-Fonts/TTNorms-Medium.otf); }
+
+@font-face {
+  font-family: ttr;
+  src: url(../css/Fonts/TT-Norms-Fonts/TTNorms-Regular.otf); }
+
+@font-face {
+  font-family: tth;
+  src: url(../css/Fonts/TT-Norms-Fonts/TTNorms-Heavy.otf); }
+
+@font-face {
+  font-family: ttb;
+  src: url(../css/Fonts/TT-Norms-Fonts/TTNorms-Bold.otf); }
+
+@font-face {
+  font-family: lml;
+  src: url(../css/Fonts/lemon_milk/LEMONMILK-Light.otf); }
+
+@font-face {
+  font-family: lmm;
+  src: url(../css/Fonts/lemon_milk/LEMONMILK-Medium.otf); }
+
+@font-face {
+  font-family: lmr;
+  src: url(../css/Fonts/lemon_milk/LEMONMILK-Regular.otf); }
+
+@font-face {
+  font-family: lmb;
+  src: url(../css/Fonts/lemon_milk/LEMONMILK-Bold.otf); }
+
+
+
+body {
+  background-color: white;
+  margin: 0%;padding: 0px;
+  margin-right: 0rem; }
+
+a {
+  text-decoration: none;
+  list-style: none; }
+
+.container-fluid{
+  padding: 0%;
+  margin: 0%;
+}
+
+/*Home!*/
+.header_logo {
+  width: 10rem; }
+
+.header_logo--small {
+  width: 10rem; }
+
+.header__portada {
+  background-image: url(../Img/vrik-phone.jpg);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 87vh;
+  width: 100%; }
+
+.navbar-dark {
+  background: none;
+  background: linear-gradient(180deg, rgba(175, 175, 180, 0.790354) 0%, rgba(199, 195, 195, 0.641894) 100%); }
+
+.header__navMenu {
+  font-family: lml;
+  color: white;
+  font-size: 1.2rem; 
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0rem;}
+
+.header__navMenu:hover {
+  font-family: lmm;
+  text-decoration: none;
+   }
+
+.padding{padding-right: 1rem;}
+
+.header__navMenu--border {
+  border: solid $colorLg; 
+  padding:0rem; margin: 0rem;
+}
+
+
+.modal{
+  text-align: left;
+}
+.last{
+  width: 100%;
+  height: 5rem;
+ 
+}
+
+.dropdown-item {
+  font-family: lmm;
+  font-size: 1rem;
+  color: white;
+  background-color: inherit;
+}
+.dropdown-menu{
+ background: linear-gradient(180deg, rgba(175, 175, 180, 0.790354) 0%, rgba(199, 195, 195, 0.641894) 100%); 
+}
+
+.dropdown-item:hover {
+  color: #30f0c6;
+}
+
+
+.p1 {
+  color:$colorLi;
+  font-size: 1rem;
+  text-align: justify;
+  padding: 1rem;
+  line-height: 1.6;
+  font-family: ttl; }
+
+.p2 {
+  color: #63646d;
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 1.6;
+  font-family: lmm; }
+
+/*buttons*/
+.btn{
+text-align: center;  
+height: 3.5rem;
+width: 12.5rem;
+font-family: lmm;
+font-size: 1rem;
+text-decoration: none;
+}
+
+.btn__login {
+font-family: lmm;
+color: white;
+background: inherit;
+font-size: 1.5rem;
+border-style: none;
+padding-left: .5rem;
+padding-right: .5rem;
+margin-right: 0.5rem;
+margin-left: 0.5rem;
+height: 3.1rem;
+width: auto;
+text-decoration: none; }
+
+.btn__login:hover {
+background-color: $colorLg;
+color: white;
+text-decoration: none; }
+.btn__login1 {
+font-family: lmm;
+color: $colorG;
+background: inherit;
+font-size: 1.5rem;
+border: solid 2px $colorLg;
+padding-left: .5rem;
+padding-right: .5rem;
+margin-right: 0.5rem;
+margin-left: 0.5rem;
+height: 3.1rem;
+width: auto;
+text-decoration: none; }
+
+.btn__login1:hover {
+background-color: $colorLg;
+color: white;
+text-decoration: none; }
+
+.btn__freeTrial {
+background-color: #63646d;
+color: white;
+border: solid $colorLg;
+  }
+
+.btn__freeTrial:hover {
+background-color: white;
+color: $colorLi;
+}
+.btn__freeTrial1 {
+background-color: white;
+color: $colorG;
+border: solid $colorLg;
+  }
+
+.btn__journey{
+background-color: $colorLi;
+color:$colorLg;
+border: solid white;
+text-decoration: none;
+padding-bottom: 0.5rem;
+}
+.btn__journey:hover{
+color: $colorLg;
+background-color: white;
+text-decoration: none;
+}
+.btn__freeTrial1:hover {
+background-color: $colorLg;
+color: white;
+text-decoration: none; }
+ 
+.justify {
+  text-align: center; }
+
+.fonts__titulo{
+  color: $colorG;
+  text-align: center;
+}  
+.fonts__titulo--principal{
+    font-family: lmb;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+ 
+}
+
+.fonts__titulo--secundario {
+  font-family: lmm;
+  font-size: 1.1rem;
+  }
+
+.fonts__titulo--small {
+  font-family: lmm;
+  font-size: 0.8rem;
+  text-align: center;
+  }
+
+  .fonts__titulo--xs {
+    font-family: ttl;
+    font-size: 1rem;
+    }
+
+
+
+.carousel-item {
+  width: 100vh;
+  height: 45vh; 
+}
+
+.carousel__title{
+  font-family: lmb;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white; }
+
+.carousel__subtitle{
+  font-family: lmm;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.fonts__titulo--white {
+  font-family: lmb;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem; }
+  
+.article__signin--format{
+  height:inherit;
+  width: 100%; 
+  margin: 0px;
+  background: $gradientgreen;
+}
+.article__signin--picture {
+  background-image: url(../Img/parsvako.jpg);
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 15%;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 60vh;
+  width: 100%; 
+    } 
+.card-body{
+
+  border: solid 1px rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(175, 175, 180, 0.790354) 0%, rgba(199, 195, 195, 0.641894) 100%);
+}
+
+.card-body-signin{
+  margin: 0rem 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.article__signin--form {
+  background-color: inherit;
+ 
+  font-family: ttr;
+  font-size: 1.5rem;
+  color: $colorG;
+  text-align: Left; }
+
+.li {
+  font-family: lmr;
+  font-size: 1rem;
+  color: $colorG;
+  list-style-image: url(../icons/check-gray-small.png);
+  list-style-position: inside;
+  text-align: left;
+  margin-bottom: 0.5rem; }
+
+
+.create {
+  color: white;
+  font-family: lmm;
+  font-size: 1rem;
+  background-color: $colorLg;
+  height: 55px;
+  width: 180px;
+  margin-bottom: 10px;
+  border: none;
+   }
+   
+.create:hover{
+  background-color: $colorLg;
+  color: #585A73;
+}
+
+
+
+.background__journey{
+background:$gradientgreen;
+width: 100%;
+height: 12rem;
+}
+  /*FAQS*/
+ 
+
+/*
+*,
+*::before,
+*::after { */
+.accordion-item{
+  background:$gradient;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: solid 1px rgb(255, 255, 255);
+  box-shadow: .5rem 2px .5rem rgb(180, 179, 179);
+}
+
+.accordion-link {
+  font-family: ttb;
+  font-size: 1rem;
+  color: $colorLi;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.accordion-link:hover{
+  text-decoration: none;
+  color: white;
+}
+.accordion-item:hover{
+  text-decoration: none;
+}
+.accordion-link i{
+  color: $colorLg;
+  padding: .5rem;
+}
+.accordion-link .up-outline{
+  display: none;
+}
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  color: $colorG;
+  font-size: 1rem;
+  transition: max-height 650ms;
+}
+
+.answer p{
+  font-size: 1rem;
+  color: $colorLi 
+}
+
+.accordion-item:target .answer{
+  max-height: 20rem;
+}
+.accordion-item:target .accordion-link .down-outline{
+  transform: rotate(180deg);
+}
+  
+
+
+
+/*Library*/
+
+.carousel-item {
+  height: 60vh;
+  width: 100vw; }
+
+.article__carousel--slide1 {
+  background-image: url(../Img/nepalok.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.article__carousel--slide2 {
+  background-image: url(../Img/paracas-grupal.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.article__carousel--slide3 {
+  background-image: url(../Img/Yoga-3.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.article__carousel--slide4{
+  background-image: url(../Img/yoga8.jpg);
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;}
+
+ 
+  $bg: rgba(0, 0, 0, 0.2);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+  border-radius: 3px;
+}
+
+.bg {
+  position: relative;
+  margin: 1%;
+  
+
+  img {
+    width: 100%;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 99%;
+    background: $bg;
+    color: #fff;
+    opacity: 0;
+    h2 {
+      padding-top: 10%;
+      font-family: lmm;
+      font-size: 2rem;
+    }
+    p {
+      font-family: lmm;
+      font-size: 0.8rem;
+    }
+  }
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+    img {
+      -webkit-filter: blur(2px);
+      filter: blur(2px);
+    }
+  }
+}
+
+
+
+/*OurMethod*/
+.method__head{
+  width: 100%;
+  height: 60vh;
+  background-image: url(../Img/method/kaladanda-grupal-phone.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-body{
+  margin: 2rem 0rem;
+}
+.article-frase{
+  height: 500px;
+  width: auto;
+  background-color: $gradientgreen;
+  color: white;
+}
+.card{
+  border: none;
+}
+.card-img-top{
+ 
+}
+li{list-style: none;}
+
+/*My Practice*/
+.backgroud-journal{
+  width: 100vw;
+  background: $gradientgreen;
+}
+
+@media screen and (min-width: 685px) {
+  .header__portada {
+    background-image: url(../Img/vrik-large.jpg)
+  }
+  .fonts__titulo--principal{
+    font-size: 1.5rem;
+  }
+  .p1{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 768px){
+  .method__head{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../Img/method/Kaladanda-2018-Grupal.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+} 
+@media screen and (min-width: 425px){
+
+
+.article__carousel--slide3 {
+  background-image: url(../Img/Yoga-3.jpg);
+  background-position-y: 0rem;
+  background-repeat: no-repeat;
+  background-size: cover; }
+}
