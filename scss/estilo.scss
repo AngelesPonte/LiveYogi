@@ -514,10 +514,13 @@ img,
   margin: 2rem 0rem;
 }
 .article-frase{
-  height: 500px;
-  width: auto;
-  background-color: $gradientgreen;
+  width: 100vw;
+  height: auto;
+  background: $gradientgreen;
   color: white;
+}
+.article-frase-white{
+  color: #fff;
 }
 .card{
   border: none;
