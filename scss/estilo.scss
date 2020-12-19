@@ -45,7 +45,7 @@ $gradientgreen:linear-gradient(354deg, rgba(226,218,222,1) 0%, rgba(148,233,205,
 body {
   background-color: white;
   margin: 0%;padding: 0px;
-  margin-right: 0rem; }
+  margin-right: 0px; }
 
 a {
   text-decoration: none;
@@ -70,19 +70,22 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 87vh;
-  width: 100%; }
+  width: 100vw }
 
 .navbar-dark {
-  background: none;
-  background: linear-gradient(180deg, rgba(175, 175, 180, 0.790354) 0%, rgba(199, 195, 195, 0.641894) 100%); }
-
+background: linear-gradient(180deg, rgba(88,85,87,1) 0%, rgba(65,66,66,0.6587009803921569) 100%);
+}
+.nav-item{
+  height: 3rem; 
+}
 .header__navMenu {
   font-family: lml;
-  color: white;
   font-size: 1.2rem; 
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  margin-bottom: 0rem;}
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  }
 
 .header__navMenu:hover {
   font-family: lmm;
@@ -101,7 +104,7 @@ a {
   text-align: left;
 }
 .last{
-  width: 100%;
+  width: 100vw;
   height: 5rem;
  
 }
@@ -276,7 +279,7 @@ text-decoration: none; }
   
 .article__signin--format{
   height:inherit;
-  width: 100%; 
+  width: 100vw; 
   margin: 0px;
   background: $gradientgreen;
 }
