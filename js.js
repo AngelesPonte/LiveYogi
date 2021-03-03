@@ -1,57 +1,121 @@
-class Playlist{
-    constructor (nombreProfesor,nombrePrograma, nombreClase, duracion){
-        this.profesor= nombreProfesor;
-        this.programa= nombrePrograma
-        this.clase= nombreClase;
-        this.duracion= duracion;
-    }
+/*Main*/
+$("#name").val()
+/*Memberships*/
+let carrito = [];
+if (localStorage.getItem("carrito") != null) {
+  carrito = JSON.parse(localStorage.getItem("carrito"));
+  $("#contador").html=carrito.length;
+  //document.getElementById('contador').innerHTML = carrito.length;
 }
-let misClasesFavoritas = new Playlist ('Angeles','Special Sport edition','kitesurf','20 min' )
-console.log(misClasesFavoritas);
+let valoresDelCarrito= JSON.parse(localStorage.getItem("carrito"));
+carrito=valoresDelCarrito;
 
-let programas = ['Meditation course','the 8 limbs of yoga','special Sports Edition','Yoga Fit','Pregnancy','Journalism Chanllenge']
-console.log('Cantidad de programas '+programas.length)
+class Memberships{
+  constructor (title,descriptionMemb, duration, precio,cantUsuarios, stock){
+      this.name= title;
+      this.description= descriptionMemb;
+      this.duration=duration;
+      this.valor= precio;
+      this.usuarios=cantUsuarios;
+      this.stock=stock;
+  }
+}
 
-let usuarios = ['Sara','Kelly','Rohan','Nikhil']
-console.log ('Cantidad de usuarios :'+ usuarios.length)
+let membresiaMensual = new Memberships ('Monthly','After a 7-day free trial, a recurring charge of U$S 15 monthly will automatically apply.','1 Month',15,'1 User',10)
+let membresiaAnual = new Memberships ('Annually','After a 7-day free trial, a recurring charge of U$S 30 monthly will automatically apply.','1 Year',150,'1 User',10)
+let membresiaFamiliarMensual = new Memberships ('Familly Monthly','After a 7-day free trial, a recurring charge of U$S 30 monthly will automatically apply','1 Month',30,'3 Users',10)
+let membresiaFamiliarAnual = new Memberships ('Familly Annually','After a 7-day free trial, a recurring charge of U$S300 yearly will automatically apply','1 Year',300,'3 Users',10)
+let membresiaGiftCardMensual = new Memberships ('Gift Card ~Month~','A one time charge of U$S 15 will automatically apply.','1 Month',15,'1 User',10)
+let membresiaGiftCardAnual = new Memberships ('Gift Card ~Year~','A one time charge of U$S 150 will automatically apply.','1 Year',150,'1 User',10)
 
-let nombre = (prompt('Ingrese su nombre '));
-let edadIngresada = Number(prompt("Ingrese su edad "));
+let baseDeDatos = [
+  membresiaMensual,
+  membresiaAnual,
+  membresiaFamiliarMensual,
+  membresiaFamiliarAnual,
+  membresiaGiftCardMensual,
+  membresiaGiftCardAnual,
+];          
+  
+let showCard = ``;
+for (let i = 0; i < baseDeDatos.length; i++) {
+  if (baseDeDatos[i].stock > 0) {
+    showCard += `
+    <div class="col-sm-6 col-md-6 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><p href="#">${baseDeDatos[i].name}</p></h5>
+              <p class="card-text"><p href="#">${baseDeDatos[i].description}</p></p>
+              <p class="card-text"><p href="#">${baseDeDatos[i].duration}</p></p>
+              <p class="card-text"><p href="#">U$S${baseDeDatos[i].valor}</p></p>
+              <p class="card-text"><p href="#">${baseDeDatos[i].usuarios}</p></p>
+              <a href="#" class="btn create" onclick='agregarAlCarrito(${JSON.stringify(
+                baseDeDatos[i]
+              )})'>Add to cart </a>
+            </div>
+          </div>
+        </div>
+    `;
+  } else {
+    showCard += `
+    <h2>I'm sorry, the platform is full</h2>`;
+  }
+}
+//document.getElementById("memberships").innerHTML = showCard;
+//JQUERY!
+$("#memberships").html(showCard);
 
-function ingresoAlaPag( parametroUno) {  
+$.get('baseDeDatos.json',function(data, status){
+  console.log(data)
+  console.log(status)
+});
 
-    parametroUno = edadIngresada  
-    if(parametroUno>=13){
-        alert ("Welcome to your practice: "+ nombre);}
-        else (alert('Sorry, you need adult supervision to enter this site'));
+//mostrar los productos que se agregaron al carrito
+
+
+function agregarAlCarrito(producto) {
+  carrito.push(producto);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  let aux = 0;
+  for (let i = 0; i < carrito.length; i++) {
+    aux += carrito[i].precio;
+  }
+
+  // document.getElementById("precio-total").innerHTML = "U$S" +aux;
+  document.getElementById("contador").innerHTML = carrito.length;
+}
+document.getElementById("showCart").innerHTML=localStorage.getItem("carrito", JSON.stringify(carrito));
+
+function borrarUnProducto() {
+  const nuevoCarrito = [];
+  for (let i = 0; i < carrito.length; i++) {
+    if (i != 1) {
+      nuevoCarrito.push(carrito[i]);
     }
+  }
+  localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+  carrito = nuevoCarrito;
+  document.getElementById("contador").innerHTML = carrito.length;
+}
+/*My-Practice*/
 
-ingresoAlaPag(edadIngresada)
+    function printObj(){
 
-var nombres =['rita','ana','dani','rohan','angie'];
-var masculinos =nombres.slice(2,4);
-console.log(masculinos)
+      let spiritualObjective = document.getElementById("writeObj").value;
+  
+      document.getElementById("mostrar").innerHTML= Date.now() + spiritualObjective;
+  
+      } //funcion Date.now() no aparce el dia correctamente...
+      const preventDefault = document.getElementById("preventDefault");
+      preventDefault.addEventListener('click', function(e){
+  
+          e.preventDefault();
+  
+      });
 
-    class Memberships{
-        constructor (duracionPago,duracionMembresia, precio,cantUsuarios){
-            this.pago= duracionPago;
-            this.membresia= duracionMembresia;
-            this.valor= precio;
-            this.usuarios=cantUsuarios;
-        }
-    }
     
-    let membresiaMensual = new Memberships ('Pay Monthly','1 Month',15,1)
-    let membresiaAnual = new Memberships ('Pay Annually','1 Year',150,1)
-    let membresiaFamiliarMensual = new Memberships ('Pay Monthly','1 Month',30,3 )
-    let membresiaFamiliarAnual = new Memberships ('Pay Annually','1 Year',300,3 )
-    let membresiaGiftCardMensual = new Memberships ('Pay One Time','1 Month',15,1 )
-    let membresiaGiftCardAnual = new Memberships ('Pay One Time','1 Year',150,1 )
 
-    console.log(membresiaMensual);
-    console.log(membresiaAnual);
-    console.log(membresiaFamiliarMensual);
-    console.log(membresiaFamiliarAnual);
-    console.log(membresiaGiftCardMensual);
-    console.log(membresiaGiftCardAnual);
-    
+
+  
+
