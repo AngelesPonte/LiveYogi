@@ -224,17 +224,18 @@ a {
 }
 
 .btn__journey {
-  background-color: #63646d;
+  background-color: white;
   color: #30f0c6;
-  border: solid white;
+
   text-decoration: none;
   padding-bottom: 0.5rem;
 }
 
 .btn__journey:hover {
-  color: #30f0c6;
-  background-color: white;
-  text-decoration: none;
+  color: white;
+  background-color: #30f0c6;
+  text-decoration: none;  
+  border: solid white;
 }
 
 .btn__freeTrial1:hover {
@@ -363,7 +364,7 @@ a {
   background-color: #30f0c6;
   height: 55px;
   width: 180px;
-  margin-bottom: 10px;
+  margin: 8px 10px;
   border: none;
 }
 
@@ -559,10 +560,6 @@ img,
   background-size: cover;
 }
 
-.card-body {
-  margin: 2rem 0rem;
-}
-
 .article-frase {
   width: 100vw;
   height: auto;
@@ -575,7 +572,9 @@ img,
 }
 
 .card {
-  border: none;
+  padding: 0rem;
+  margin-top: 1rem;
+  border: #585A73 1rem;
 }
 
 li {
