@@ -1,0 +1,26 @@
+[
+    {
+        "_id": "1",
+        "Membresia":"anual",
+        "precio":1,
+        "usuarios":1
+    },
+    {
+        "_id": "2",
+        "Membresia":"mensual",
+        "precio":1,
+        "usuarios":1
+    },
+    {
+        "_id": "3",
+        "Membresia":"anual",
+        "precio":1,
+        "usuarios":3
+    },
+    {
+        "_id": "4",
+        "Membresia":"mensual",
+        "precio":1,
+        "usuarios":3
+    }
+]

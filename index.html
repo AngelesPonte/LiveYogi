@@ -17,6 +17,10 @@
     <!--IonIcons-->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script> 
     <type="text">
+    <!--Javascript-->
+    <script src="js.js" async></script>
+    <!--Para que cargue bien-->
+    <link rel="preload" href="js.js" as="script">
 </head>
 <body class="container-fluid">
   <!--NavBar-->
@@ -38,8 +42,8 @@
                     <li class="nav-item header__navMenu">
                         <a class="nav-link" href="html/method.html">Our Method</a>
                       </li>
-                    <li class="nav-item header__navMenu header__navMenu--border">
-                      <a class="nav-link" href="#">Start free trial</a>
+                    <li class="nav-item header__navMenu header__navMenu--border" id="startFt">
+                      <a class="nav-link" href="html/membership.html">Start free trial</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -59,7 +63,7 @@
                                     </button>
                                   </div>
                                   <div class="modal-body">
-                                    <form>
+                                    <form id="formulario">
                                       <div class="form-group">
                                         <label for="inputEmailLogIn" class="fonts__titulo fonts__titulo--secundario">Email </label>
                                         <input type="email" class="form-control" id="inputEmailLogIn" aria-describedby="emailHelp" placeholder="Enter email">
@@ -130,10 +134,10 @@
             <li class="li">Create an account</li>
             <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="First name">
+                  <input type="text" class="form-control" id="name" placeholder="First name">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Last name">
+                  <input type="text" class="form-control"  id="lastName" placeholder="Last name">
                 </div>
             </div>
             <div class="form-group">
@@ -148,7 +152,7 @@
             </div>
             <div >
                 <div>
-                     <button type="submit" class="create">Create Account</button>
+                     <button  type="submit" id="createAccount" class="create">Create Account</button>
                 </div>
             </div>
            
@@ -196,8 +200,14 @@
     <h4 class="row-xs-10 fonts__titulo fonts__titulo--white">Your yoga studio at home, one click away</h4>
     <div class="row-xs-8 justify"><button class="btn btn__journey p-1 justify-content-center"><a href=""></a> Begin your journey</button></div>
   </div>
-</div>
-      
+  <h2 class="fonts__titulo fonts__titulo--principal mt-0 pt-3">Memberships</h2> 
+    <div class="row" id="memberships">
+
+    </div>
+    <h2 class="fonts__titulo fonts__titulo--principal mt-0 pt-3">Select Payment Method</h2> 
+    <div class="container"></div>
+  
+    
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -209,7 +219,7 @@
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1" class="fonts__titulo fonts__titulo--xs" >Tell us everything</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlText" rows="3"></textarea>
           </div>
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="checkLogIn">
